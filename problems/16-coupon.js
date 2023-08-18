@@ -15,15 +15,14 @@ console.log(twentyPercent([10, 20, 30])); // [ 8, 16, 24 ]
 
 ***********************************************************************/
 function coupon(discount) {
-  let disVal = [];
+  let discountPrice = [];
   return function(prices) {
-    for(cost of prices) {
-      disVal.push(cost - cost * discount);
+    for(let price of prices) {
+      discountPrice.push(price - price * discount);
     }
-    return disVal;
+    return discountPrice;
   }
 }
-
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = coupon;

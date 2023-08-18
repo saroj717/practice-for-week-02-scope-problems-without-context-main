@@ -24,16 +24,27 @@ console.log(table2(75)); // STILL prints 6
 
 ***********************************************************************/
 function recVolume(height) {
-  let arr = [];
-  return function(w) {
-    arr.push(w);
-    let width = arr[0];
-    let length =  arr[1];
-    let volume = height * width * length;
+  let dimension = []
+  return function(measurement){
+    dimension.push(measurement);
+    let volume = height * dimension[0] * dimension[1];
     return volume;
   }
-}
+  // let length = null;
+  // let width = null;
+  // let volume = null;
 
+  // return function (dimension) {
+  //     if (length === null) {
+  //         length = dimension;
+  //     } else if (width === null) {
+  //         width = dimension;
+  //     } else if (volume === null) {
+  //         volume = height * width * length;
+  //     }
+  //     return volume;
+  // };
+}
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = recVolume;
