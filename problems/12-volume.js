@@ -24,13 +24,13 @@ console.log(table2(75)); // STILL prints 6
 
 ***********************************************************************/
 function recVolume(height) {
-  console.log(height);
-  return function(width) {
-    console.log(width);
-    return function(length) {
-      let volume = height * width * length;
-      return volume;
-    }
+  let arr = [];
+  return function(w) {
+    arr.push(w);
+    let width = arr[0];
+    let length =  arr[1];
+    let volume = height * width * length;
+    return volume;
   }
 }
 

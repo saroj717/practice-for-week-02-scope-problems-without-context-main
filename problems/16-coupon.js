@@ -15,11 +15,12 @@ console.log(twentyPercent([10, 20, 30])); // [ 8, 16, 24 ]
 
 ***********************************************************************/
 function coupon(discount) {
+  let disVal = [];
   return function(prices) {
-    for(price of prices) {
-      console.log(price)
+    for(cost of prices) {
+      disVal.push(cost - cost * discount);
     }
-    // return price - price * discount;
+    return disVal;
   }
 }
 
